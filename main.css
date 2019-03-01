@@ -1,0 +1,105 @@
+* {
+    /* border: 1px red solid; */
+    box-sizing: border-box;
+}
+:root {
+    --pink: #B01E5A;
+    --lgter-blue: #2A7AB0;
+    --lgt-blue: #2A7AB0;
+    --dark-blue: #2C5472;
+    --white: #EBE8DA;
+    --dark-grad: radial-gradient(circle at 0%, var(--dark-blue)  0%, black 100%);
+    --lgt-grad: radial-gradient(circle at 100%, var(--white) 0%, var(--lgt-blue) 100%);
+    --lgt-grad: linear-gradient(0deg, var(--white) 0%, var(--lgt-blue) 150%);
+    --header-text: "Titan One";
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background: var(--dark-grad);
+}
+
+h1,
+h2 {
+    margin-left: 5%;
+    /* -webkit-text-fill-color: transparent;
+    text-emphasis-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: var(--lgt-grad); */
+    /* background-image: black; */
+    color: var(--white); 
+    text-shadow: 1px 1px 0.1em var(--pink), 0 0 0.2em var(--dark-blue);
+}
+
+h1 {
+    font-family: "Alfa Slab One";
+    font-size: 5.75rem;
+    margin-bottom: 0;
+}
+
+span {
+    width: 10%;
+    height: 10%;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: "sans-serif";
+    color: var(--white);
+    margin-left: 2%;
+}
+
+h1::after, 
+h2::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: linear-gradient(200deg, #f61067, #5e239d, #00ffc5);
+    background: linear-gradient(200deg, var(--pink) 40%, #5e239d, #00ffc5);
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  h2::after {
+      transition: all 0.3s ease-in-out 0.5s;
+  }
+  
+  header:hover h1::after, 
+  header:hover h2::after {
+    transform: scaleX(1);
+  }
+
+  .subtext {
+      width: 50%;
+      display: flex;
+      margin-left: 5%;
+      /* justify-content: center; */
+      align-items: center;
+  }
+
+  span {
+      background: linear-gradient(0deg, var(--pink), #5e239d, #00ffc5);
+      background: var(--pink);
+      width: 30px;
+      height: 30px;
+      transform: rotate(45deg);
+      /* transform: rotate(45deg) rotateY(0deg); */
+      transition: transform 1s ease-in-out 0s;
+      
+  }
+
+  header:hover span{
+      transform: rotate(315deg);
+     
+  }
